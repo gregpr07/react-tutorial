@@ -1,5 +1,15 @@
 import React from 'react';
 
+const text = 'machine learning';
+fetch(`https://platform.x5gon.org/api/v1/search?text=${text}`)
+	.then(res => res.json())
+	.then(json => {
+		/* this.setState({
+			isLoaded: true
+        }); */
+		console.log(json);
+	});
+
 const App = () => {
 	return (
 		<div>
@@ -9,24 +19,3 @@ const App = () => {
 };
 
 export default App;
-
-fetch(
-	this.state.site_api +
-		'search?text=' +
-		this.state.search_key +
-		'&page=' +
-		this.state.current_page
-)
-	.then(res => res.json())
-	.then(json => {
-		this.setState({
-			isLoaded: true,
-			api_search: {
-				query: json.query,
-				rec_materials: json.rec_materials,
-				metadata: json.metadata
-			},
-			showRecommendations: false,
-			IsSearching: true
-		});
-	});

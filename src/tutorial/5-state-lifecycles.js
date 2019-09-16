@@ -21,4 +21,7 @@ class App extends React.Component {
 //  Correct
 // this.setState({comment: 'Hello'});
 
+// components update on change
+// also access state from anywhere
+
 export default App;

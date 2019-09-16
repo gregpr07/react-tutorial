@@ -1,5 +1,14 @@
 import React from 'react';
-import './App.css';
+
+const text = 'machine learning';
+fetch(`https://platform.x5gon.org/api/v1/search?text=${text}`)
+	.then(res => res.json())
+	.then(json => {
+		/* this.setState({
+			isLoaded: true
+        }); */
+		console.log(json);
+	});
 
 const App = () => {
 	return (
