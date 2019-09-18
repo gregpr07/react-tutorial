@@ -39,7 +39,7 @@ class App extends React.Component {
 		<ul style={styles.ul}>
 			{this.state.searchResults.map((item, index) => (
 				<li style={styles.li} key={index}>
-					<h4>{item.title}</h4>
+					<h3 style={{ color: 'white' }}>{item.title}</h3>
 					<p>{item.description ? item.description.slice(0, 200) : null}</p>
 				</li>
 			))}
@@ -71,23 +71,28 @@ const styles = {
 		paddingLeft: 0
 	},
 	li: {
-		backgroundColor: '#616161',
-		color: 'white',
-		padding: '10px',
-		margin: '1rem 0 0rem 0',
-		borderRadius: '10px'
+		/* backgroundColor: '#616161', */
+		border: '1px solid #D84315',
+		color: '#9E9E9E',
+		padding: '0 10px 0 10px',
+		margin: '1rem 0 1rem 0',
+		borderRadius: '5px'
 	},
 	input: {
-		border: 'none',
+		border: '3px solid #303F9F',
 		borderRadius: '10px',
-		padding: '2px 0px 2px 5px'
+		background: 'none',
+		padding: '2px 5px 2px 5px',
+		color: 'white'
 	},
 	searchButton: {
 		backgroundColor: '#D84315',
 		border: 'none',
 		borderRadius: '10px',
-		padding: '5px 10px 5px 10px',
-		color: 'black'
+		padding: '5px 20px 5px 20px',
+		marginLeft: '20px',
+		color: 'black',
+		cursor: 'pointer'
 	}
 };
 

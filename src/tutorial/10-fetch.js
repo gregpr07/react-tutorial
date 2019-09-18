@@ -23,12 +23,12 @@ class App extends React.Component {
 				<h1>React is amazing!</h1>
 				<button onClick={() => this.fetchData()}>Fetch</button>
 
-				{/* DISPLAY FETCHED ELEMENTS */}
+				{/* DISPLAY FETCHED ELEMENTS with UL */}
 			</div>
 		);
 	}
 }
 
-// add form
+// add form, handle change
 
 export default App;
