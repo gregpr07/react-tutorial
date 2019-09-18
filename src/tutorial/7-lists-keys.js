@@ -12,4 +12,7 @@ const App = () => {
 	);
 };
 
+// key determines if the component is changed
+// only use index if they don't repeat
+
 export default App;
