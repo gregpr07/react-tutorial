@@ -6,6 +6,7 @@ class App extends React.Component {
 		this.state = { isToggleOn: true };
 
 		// This binding is necessary to make `this` work in the callback
+		// How to get rid of this?
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -20,6 +21,8 @@ class App extends React.Component {
 			<button onClick={this.handleClick}>
 				{this.state.isToggleOn ? 'ON' : 'OFF'}
 			</button>
+
+			// make div
 		);
 	}
 }
@@ -29,5 +32,7 @@ class App extends React.Component {
 
 // condition ? true : false
 // && and ||
+
+// cant use if
 
 export default App;

@@ -10,18 +10,26 @@ class App extends React.Component {
 		this.setState({ value: event.target.value });
 	};
 
-	handleSubmit = event => {
-		event.preventDefault();
-		console.log([this.state.value]);
+	anything = event => {
 		this.setState({
-			todos: [...this.state.todos, this.state.value]
+			todos: [...this.state.todos, this.state.value],
+			value: ''
+		});
+		event.preventDefault();
+	};
+
+	removeItem = item => {
+		const newList = this.state.todos.filter(li => li !== item);
+		console.log('Removed: ' + item);
+		this.setState({
+			todos: newList
 		});
 	};
 
 	render() {
 		return (
-			<div>
-				<form onSubmit={this.handleSubmit}>
+			<div style={{ padding: '5rem' }}>
+				<form onSubmit={this.anything}>
 					<label>
 						Name:
 						<input
@@ -32,11 +40,17 @@ class App extends React.Component {
 					</label>
 					<button type="submit">Add todo</button>
 				</form>
-				<ul>
-					{this.state.todos.map((todo, index) => {
-						return <li>{todo}</li>;
-					})}
-				</ul>
+				<div>
+					<h3>Todos:</h3>
+					<ul>
+						{this.state.todos.map((todo, index) => (
+							<li key={index}>
+								<h4 style={{ display: 'inline' }}>{todo}</h4>
+								<button onClick={() => this.removeItem(todo)}>X</button>
+							</li>
+						))}
+					</ul>
+				</div>
 			</div>
 		);
 	}

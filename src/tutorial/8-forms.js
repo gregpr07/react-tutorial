@@ -3,6 +3,7 @@ import React from 'react';
 class App extends React.Component {
 	constructor(props) {
 		super(props);
+		// spread operator
 		this.state = { value: '' };
 	}
 
@@ -17,21 +18,26 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<form onSubmit={this.handleSubmit}>
-				<label>
-					Name:
-					<input
-						type="text"
-						value={this.state.value}
-						onChange={this.handleChange}
-					/>
-				</label>
-				<button type="submit">SUBMIT</button>
-			</form>
+			<div style={{ padding: '5rem' }}>
+				<form onSubmit={this.handleSubmit}>
+					<label>
+						Name:
+						<input
+							type="text"
+							value={this.state.value}
+							onChange={this.handleChange}
+						/>
+					</label>
+					<button type="submit">SUBMIT</button>
+				</form>
+				{/* loop through todo */}
+			</div>
 		);
 	}
 }
 
 // bad idea to get text from input - not React way - have to use getelementby...
+
+// try to make 9-todo
 
 export default App;

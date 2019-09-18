@@ -1,21 +1,34 @@
 import React from 'react';
 
-const text = 'machine learning';
-fetch(`https://platform.x5gon.org/api/v1/search?text=${text}`)
-	.then(res => res.json())
-	.then(json => {
-		/* this.setState({
-			isLoaded: true
-        }); */
-		console.log(json);
-	});
+class App extends React.Component {
+	constructor(props) {
+		super(props);
+		this.state = { value: '', searchResults: [] };
+	}
+	fetchData = () => {
+		const text = 'machine learning';
+		fetch(`https://platform.x5gon.org/api/v1/search?text=${text}`)
+			.then(res => res.json())
+			.then(json => {
+				this.setState({
+					searchResults: true
+				});
+				console.log(json);
+			});
+	};
 
-const App = () => {
-	return (
-		<div>
-			<h1>React is amazing!</h1>
-		</div>
-	);
-};
+	render() {
+		return (
+			<div>
+				<h1>React is amazing!</h1>
+				<button onClick={() => this.fetchData()}>Fetch</button>
+
+				{/* DISPLAY FETCHED ELEMENTS */}
+			</div>
+		);
+	}
+}
+
+// add form
 
 export default App;

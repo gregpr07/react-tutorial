@@ -2,6 +2,7 @@ import React from 'react';
 
 const App = () => {
 	const PersonDetails = person => {
+		person = person.person;
 		return (
 			<div>
 				<h3>{person.name}</h3>
@@ -9,24 +10,22 @@ const App = () => {
 			</div>
 		);
 	};
-	const persons = [
-		{
-			name: 'John',
-			surname: 'Doe'
-		},
-		{
-			name: 'Erlich',
-			surname: 'Bachman'
-		}
-	];
+
+	// make list
+
 	return (
+		// STYLE WITH CSS
 		<div>
 			<h1 class="amazing">React is amazing!</h1>
-			{persons.map(person => {
-				return <div>{PersonDetails(person)}</div>;
-			})}
+			<PersonDetails person={{ name: 'Paul', surname: 'Walker' }} />
 		</div>
 	);
+};
+
+const custom = {
+	padding: '5rem',
+	backgroundColor: '#17223b',
+	color: '#6b778d'
 };
 
 // JSX closer to JS - uses camel case
@@ -34,7 +33,5 @@ const App = () => {
 // allows us to write JS inside "HTML" (JSX) { CODEBLOCKS }
 
 // make complex component - list .map through {name,surname,date}
-
-// even by this point HTML is really much faster to write
 
 export default App;

@@ -6,6 +6,8 @@ class App extends React.Component {
 		this.state = { count: 0 };
 	}
 
+	// make increase count function
+
 	render() {
 		return (
 			<div>
