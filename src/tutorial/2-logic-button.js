@@ -8,6 +8,7 @@ const App = () => {
 
 	// 2.1 Format User function (make object and function) - two ways -- here only function - component go next slide
 	//just say hello
+// make name, surname function
 
 	return (
 		<div>
