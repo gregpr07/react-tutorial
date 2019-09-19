@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
 
-class App extends React.Component {
+class CustomComponent extends React.Component {
 	render() {
 		return (
 			<div>
@@ -20,4 +19,4 @@ class App extends React.Component {
 
 // props.children
 
-export default App;
+export default CustomComponent;

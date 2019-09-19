@@ -1,8 +1,8 @@
 import React from 'react';
 
-const App = () => {
-	const PersonDetails = person => {
-		person = person.person;
+const JSXvHTML = () => {
+	const PersonDetails = props => {
+		const person = props.person;
 		return (
 			<div>
 				<h3>{person.name}</h3>
@@ -22,16 +22,8 @@ const App = () => {
 	);
 };
 
-const custom = {
-	padding: '5rem',
-	backgroundColor: '#17223b',
-	color: '#6b778d'
-};
-
-// JSX closer to JS - uses camel case
-
-// allows us to write JS inside "HTML" (JSX) { CODEBLOCKS }
-
 // make complex component - list .map through {name,surname,date}
 
-export default App;
+// props.children
+
+export default JSXvHTML;

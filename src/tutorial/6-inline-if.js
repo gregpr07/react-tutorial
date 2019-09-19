@@ -1,12 +1,11 @@
 import React from 'react';
 
-class App extends React.Component {
+class If extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { isToggleOn: true };
 
-		// This binding is necessary to make `this` work in the callback
-		// How to get rid of this?
+		// Try to get rid of this?
 		this.handleClick = this.handleClick.bind(this);
 	}
 
@@ -35,4 +34,4 @@ class App extends React.Component {
 
 // cant use if
 
-export default App;
+export default If;

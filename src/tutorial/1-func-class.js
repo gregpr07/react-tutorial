@@ -1,7 +1,7 @@
 import React from 'react';
 
 // You can have React.Component or Component --> import {Component}
-class App extends React.Component {
+class FuncClass extends React.Component {
 	render() {
 		return (
 			// this is JSX, resemble HTML -> kinda is, but gets compiled to native HTML
@@ -13,7 +13,7 @@ class App extends React.Component {
 }
 
 // eslint-disable-next-line
-const App1 = () => {
+const FuncClass1 = () => {
 	return (
 		<div>
 			<h1>React is amazing!</h1>
@@ -21,11 +21,4 @@ const App1 = () => {
 	);
 };
 
-// eslint-disable-next-line
-const App2 = () => (
-	<div>
-		<h1>React is amazing!</h1>
-	</div>
-);
-
-export default App;
+export default FuncClass;

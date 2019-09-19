@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class FetchSTH extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { value: '', searchResults: [] };
@@ -31,4 +31,4 @@ class App extends React.Component {
 
 // add form, handle change
 
-export default App;
+export default FetchSTH;

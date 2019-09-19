@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class Forms extends React.Component {
 	constructor(props) {
 		super(props);
 		// spread operator
@@ -40,4 +40,4 @@ class App extends React.Component {
 
 // try to make 9-todo
 
-export default App;
+export default Forms;

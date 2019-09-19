@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class Final extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { value: '', searchResults: [] };
@@ -57,6 +57,8 @@ class App extends React.Component {
 	}
 }
 
+// try to fix the error when searching with empty string
+
 const styles = {
 	div: {
 		padding: '5rem',
@@ -96,4 +98,4 @@ const styles = {
 	}
 };
 
-export default App;
+export default Final;

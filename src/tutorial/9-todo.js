@@ -1,6 +1,6 @@
 import React from 'react';
 
-class App extends React.Component {
+class Todo extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = { value: '', todos: [] };
@@ -56,4 +56,4 @@ class App extends React.Component {
 	}
 }
 
-export default App;
+export default Todo;

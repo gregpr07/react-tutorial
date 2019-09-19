@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
 
-const App = () => {
+const Lists = () => {
 	const numbers = [1, 2, 3, 4, 5];
 	const listItems = numbers.map(number => <li>{number}</li>);
 	return (
@@ -15,4 +14,4 @@ const App = () => {
 // key determines if the component is changed
 // only use index if they don't repeat
 
-export default App;
+export default Lists;
