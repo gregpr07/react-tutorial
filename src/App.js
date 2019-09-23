@@ -30,8 +30,32 @@ const App = () => {
 			<Route path="/9" exact component={Todo} />
 			<Route path="/10" exact component={FetchSTH} />
 			<Route path="/11" exact component={Final} />
+			{/* <VisitNext /> */}
 		</Router>
 	);
 };
+
+/* 
+const VisitNext = () => {
+	const page = () => {
+		const string = window.location.href;
+		if (isNaN(parseInt(string[string.length - 1]))) {
+			return -1;
+		} else {
+			return parseInt(string[string.length - 1]);
+		}
+	};
+	const [currentPage, setCurrentPage] = useState(page());
+	const updateCurrentPage = () => {
+		setCurrentPage(page());
+	};
+	useEffect(() => updateCurrentPage());
+	return (
+		<button onClick={updateCurrentPage}>
+			<Link to={'/' + (currentPage + 1)}>Visit part {currentPage + 1}</Link>
+		</button>
+	);
+};
+ */
 
 export default App;
